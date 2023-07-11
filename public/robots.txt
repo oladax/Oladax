@@ -1,3 +1,52 @@
-# https://www.robotstxt.org/robotstxt.html
-User-agent: *
-Disallow:
+https://www.awwwards.com/sites/balbycare
+https://dribbble.com/shots/21788500-Personal-Portfolio-Website-Landing-Page
+https://greensock.com/showcase/
+https://dribbble.com/shots/21788500-Personal-Portfolio-Website-Landing-Page
+https://icons8.com/     ceelphone
+https://www.colorcombos.com/color-schemes/3/ColorCombo3.html
+                fontFamily: 'Arial, sans-serif',
+ padding: 13px 90px;
+    position: relative;
+
+    <div className="logo">
+          <span className='icon'><FaLaptopCode /></span>
+          <h1>
+            Oladax
+          </h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div className="hire">
+          <a href="contact"> Hire Me <span className='forward'>&raquo;</span></a>
+        </div>
+
+        <div className="dropdown">
+    <button onClick={triggermenu}>  <FontAwesomeIcon icon={isMenuOpen ? faTimes : faBars} />
+</button>  
+  </div>
+
+
+
+
+
+ <div className="sprinkle-container">
+      <span className="entity entity5"> &darr;&darr;&darr;&darr;</span>
+      <span className="entity entity6">&uarr;&uarr;&uarr;&uarr;</span>  
+      {/* Other components and content */}
+    </div>
+
+
+ <div className="toggle">
+      <button onClick={Darkmode}>
+        <FontAwesomeIcon icon={Sun ? faSun : faMoon} />
+      </button>
+    </div>

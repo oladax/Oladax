@@ -1,0 +1,9 @@
+.service-con{
+    background-color: green;
+    max-width: 88rem;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: auto;  
+    color: red;
+}
