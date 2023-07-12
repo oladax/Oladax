@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Oladax/static/css/main.cfad3614.css",
+    "main.css": "/Oladax/static/css/main.d892c49e.css",
     "main.js": "/Oladax/static/js/main.81355ac5.js",
     "static/media/Oletter1-removebg-preview.png": "/Oladax/static/media/Oletter1-removebg-preview.4d90bcea393b2fad21b2.png",
     "static/media/avaterscreenshoot-removebg-preview.png": "/Oladax/static/media/avaterscreenshoot-removebg-preview.507fce37c6e1559f85ce.png",
     "index.html": "/Oladax/index.html",
-    "main.cfad3614.css.map": "/Oladax/static/css/main.cfad3614.css.map",
+    "main.d892c49e.css.map": "/Oladax/static/css/main.d892c49e.css.map",
     "main.81355ac5.js.map": "/Oladax/static/js/main.81355ac5.js.map"
   },
   "entrypoints": [
-    "static/css/main.cfad3614.css",
+    "static/css/main.d892c49e.css",
     "static/js/main.81355ac5.js"
   ]
 }
