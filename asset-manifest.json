@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Oladax/static/css/main.2ad1b81a.css",
-    "main.js": "/Oladax/static/js/main.81355ac5.js",
+    "main.css": "/Oladax/static/css/main.0444674c.css",
+    "main.js": "/Oladax/static/js/main.c7c68a7a.js",
     "static/media/Oletter1-removebg-preview.png": "/Oladax/static/media/Oletter1-removebg-preview.4d90bcea393b2fad21b2.png",
-    "static/media/avaterscreenshoot-removebg-preview.png": "/Oladax/static/media/avaterscreenshoot-removebg-preview.507fce37c6e1559f85ce.png",
+    "static/media/kingola-removebg-preview.png": "/Oladax/static/media/kingola-removebg-preview.7345cfd955adcc0645b5.png",
     "index.html": "/Oladax/index.html",
-    "main.2ad1b81a.css.map": "/Oladax/static/css/main.2ad1b81a.css.map",
-    "main.81355ac5.js.map": "/Oladax/static/js/main.81355ac5.js.map"
+    "main.0444674c.css.map": "/Oladax/static/css/main.0444674c.css.map",
+    "main.c7c68a7a.js.map": "/Oladax/static/js/main.c7c68a7a.js.map"
   },
   "entrypoints": [
-    "static/css/main.2ad1b81a.css",
-    "static/js/main.81355ac5.js"
+    "static/css/main.0444674c.css",
+    "static/js/main.c7c68a7a.js"
   ]
 }
