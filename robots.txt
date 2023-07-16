@@ -1,52 +1,20 @@
-https://www.awwwards.com/sites/balbycare
-https://dribbble.com/shots/21788500-Personal-Portfolio-Website-Landing-Page
-https://greensock.com/showcase/
-https://dribbble.com/shots/21788500-Personal-Portfolio-Website-Landing-Page
-https://icons8.com/     ceelphone
-https://www.colorcombos.com/color-schemes/3/ColorCombo3.html
-                fontFamily: 'Arial, sans-serif',
- padding: 13px 90px;
-    position: relative;
-
-    <div className="logo">
-          <span className='icon'><FaLaptopCode /></span>
-          <h1>
-            Oladax
-          </h1>
-        </div>
-        <nav>
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#testimonials">Testimonials</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-
-        <div className="hire">
-          <a href="contact"> Hire Me <span className='forward'>&raquo;</span></a>
-        </div>
-
-        <div className="dropdown">
-    <button onClick={triggermenu}>  <FontAwesomeIcon icon={isMenuOpen ? faTimes : faBars} />
-</button>  
-  </div>
-
-
-
-
-
- <div className="sprinkle-container">
-      <span className="entity entity5"> &darr;&darr;&darr;&darr;</span>
-      <span className="entity entity6">&uarr;&uarr;&uarr;&uarr;</span>  
-      {/* Other components and content */}
+ <div className="service">
+    <li><FontAwesomeIcon icon={faDesktop} /></li>
+      <h3>Responsive Web Design</h3>
+      <p>Create websites that adapt and provide an optimal viewing experience across various devices and screen sizes.</p>
+      <p className="example">Example: "Crafting visually appealing and responsive websites that seamlessly adapt to any device, ensuring a consistent user experience."</p>
     </div>
 
+    <div className="service">
+      <li><FontAwesomeIcon icon={faPalette} /></li>
+      <h3>User Interface (UI) Design</h3>
+      <p>Design intuitive and visually appealing user interfaces that enhance user interactions and improve overall user experience.</p>
+      <p className="example">Example: "Designing elegant and user-friendly interfaces that captivate users, improve usability, and drive engagement."</p>
+    </div>
 
- <div className="toggle">
-      <button onClick={Darkmode}>
-        <FontAwesomeIcon icon={Sun ? faSun : faMoon} />
-      </button>
+    <div className="service">
+      <li><FontAwesomeIcon icon={faCode} /></li>
+      <h3>Frontend Development</h3>
+      <p>Develop high-quality frontend code using modern web technologies (HTML, CSS, JavaScript) to bring designs to life and deliver seamless user experiences.</p>
+      <p className="example">Example: "Building robust and performant frontend solutions, translating design concepts into clean and scalable code for exceptional user experiences."</p>
     </div>
