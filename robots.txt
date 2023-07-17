@@ -1,74 +1,191 @@
-import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faClone, faCode, faDesktop, faGlobe, faPalette, faRocket } from '@fortawesome/free-solid-svg-icons';
-function Serv() {
+import React, { useState, useEffect, useRef } from 'react';
+import oladax from './Images/kingola-removebg-preview.png'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSun, faMoon, faTimes, faBars, faCircle } from '@fortawesome/free-solid-svg-icons';
+import { faGithub, faLinkedin, faFacebook, faWhatsapp, faTelegram } from '@fortawesome/free-brands-svg-icons';
+import { faPlay } from '@fortawesome/free-solid-svg-icons';
+import Serv from './Serv';
+
+function Portfolioheader() {
+  const [Sun, setSun] = useState(true);
+
+  const  body = document.querySelector("body")
+  const  h1 = document.querySelector(".h1");
+  const service = document.querySelectorAll('.service-intro p');
+  ///const  dd = document.querySelector("dd");
+  const  h2 = document.querySelector("h2");
+  const  header = document.querySelector("header");
+  const  homepage = document.querySelector(".header-main");
+  const anchorTags = document.querySelectorAll('nav a');
+ const intro = document.querySelectorAll('.social-media-icons a');
+  const [isToggled, setIsToggled] = useState(true);
+
+  const handleToggle = () => {
+    setIsToggled(!isToggled);
+  };
+
+  //grabbing the intro p tag with useref
+
+  const pRef = useRef(true);
+  const watch = useRef(true)
+  const para = pRef.current;
+
+  const Darkmode = () => {
+    setSun(!Sun);
+    body.classList.toggle("darkmode")
+    h1.classList.toggle("darkmode")
+    h2.classList.toggle("darkmode")
+    service.classList.toggle("darkmode")
+    homepage.classList.toggle("darkmode")
+    header.classList.toggle("darkmode")
+    intro.forEach((a) => a.classList.toggle("darkmode"))
+    anchorTags.forEach((map) => map.classList.toggle("darkmode"))
+    handleToggle();
+    para.classList.toggle("darkmode")
+    const watch_intro = watch.current
+    watch_intro.classList.toggle("darkmode")
+
+  }
+
+//openmenu
+const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+ const triggermenu = () => {
+     setIsMenuOpen(!isMenuOpen)
+ }
+
+
+  const [text, setText] = useState('');
+  const message = "Hello! I'm\nOladax,\nA Frontend Web Developer."; // Use line breaks with '\n'
+    
+  
+  useEffect(() => {
+    // Recursive function to simulate typing effect
+    const typeText = (currentIndex) => {
+      // Base case: if currentIndex exceeds message length, return
+      if (currentIndex >= message.length) return;
+
+      // Update the text state with the current message
+      setText(message.slice(0, currentIndex + 1));
+
+      // Delay between each character typing
+      const delay = 200;
+
+      // Recursive call to type the next character
+      setTimeout(() => {
+        typeText(currentIndex + 1);
+      }, delay);
+    };
+
+    // Start the typing effect when the component mounts
+    typeText(0);
+  }, []);
+
   return (
-    <div className='service-con'>
-     <div className='ser-main'>
-        <div className="service-div">
-             <div className="service-intro">
-                <p>My Services </p>
-                <h2>Expertise Service! Let's Dive In.</h2>
-                <dd id='dd'>I offer expertise services that deliver exceptional results. Let's collaborate to bring your vision to life. </dd> </div>
-                <div className="service-container">
- <div className="first-set">
- <div className="service">
-    <li><FontAwesomeIcon icon={faDesktop} /></li>
-      <h3>Responsive Web Design</h3>
-      <p>Create websites that adapt and provide an optimal viewing experience across various devices and screen sizes.</p>
-      <p className="example">Example: "Crafting visually appealing and responsive websites that seamlessly adapt to any device, ensuring a consistent user experience."</p>
+    <div className="project-con">
+<div className='header-main'>
+
+<header>
+
+<div className="logo">
+<span className="circle-icon">
+      <FontAwesomeIcon icon={faCircle} />
+    </span>
+  <h1>
+    ladax
+  </h1>
+</div>
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div className="hire">
+    <a href="contact"> Hire Me <span className='forward'>&raquo;</span></a>
+  </div>
+
+  <div className="dropdown">
+<button onClick={triggermenu}>  <FontAwesomeIcon icon={isMenuOpen ? faTimes : faBars} />
+</button>  
+</div>
+
+</header>
+
+
+{/* light mode default*/}
+<div className="toggle">
+<button onClick={Darkmode}>
+  <FontAwesomeIcon icon={Sun ? faSun : faMoon} />
+</button>
+</div>
+
+
+{/*darkmode*/}
+
+ <div className="section-con">
+ <section>
+  <div className="intro-con">
+    {/* Use CSS white-space property to preserve line breaks */}
+    <h1 className='h1'>
+{text}
+</h1>
+    <p ref={pRef} >I specialize in crafting engaging websites that captivate users. Hire me now  <br /> to discover the excellence of my web development expertise.
+</p>
+    <div className="cv-con"><button>Download CV</button>
+    <button ref={watch}  className='play'>
+          <span ><FontAwesomeIcon icon={faPlay} /></span>
+        Watch Intro
+        </button>
+    </div>
+  </div>
+
+   <div className="oladax-pic">
+    <img src={oladax} alt="Oladax" />
+    <div>
+      <div className="empty"></div>
     </div>
 
-   
-
-    <div className="service">
-      <li><FontAwesomeIcon icon={faCode} /></li>
-      <h3>Frontend Development</h3>
-      <p>Develop high-quality frontend code using modern web technologies (HTML, CSS, JavaScript) to bring designs to life and deliver seamless user experiences.</p>
-      <p className="example">Example: "Building robust and performant frontend solutions, translating design concepts into clean and scalable code for exceptional user experiences."</p>
+  <div className="social-media-icons">
+      <a href="#">
+        <FontAwesomeIcon icon={faGithub} className="social-media-icon" />
+      </a>
+      <a href="#">
+        <FontAwesomeIcon icon={faLinkedin} className="social-media-icon" />
+      </a>
+      <a href="#">
+        <FontAwesomeIcon icon={faFacebook} className="social-media-icon" />
+      </a>
+      <a href="#">
+        <FontAwesomeIcon icon={faWhatsapp} className="social-media-icon" />
+      </a>
+      <a href="#">
+        <FontAwesomeIcon icon={faTelegram} className="social-media-icon" />
+      </a>
     </div>
- </div>
+   </div>
+
   
-  <div className="second-set">
+
  
-  
-  <div className="service">
-  <li><FontAwesomeIcon icon={faGlobe} /></li>
-    <h3>Cross-Browser Compatibility</h3>
-    <p>Ensure that websites and web applications are compatible and function consistently across different web browsers and platforms.</p>
-    <p className="example">Example: "Ensuring cross-browser compatibility to guarantee that your website functions flawlessly across popular web browsers, delivering a consistent experience for all users."</p>
-  </div>
-  
-  <div className="service">
-    <li><FontAwesomeIcon icon={faRocket} /></li>
-    <h3>Performance Optimization</h3>
-    <p>Optimize website performance through efficient coding practices, image optimization, caching, and other techniques to improve loading speed and overall performance.</p>
-    <p className="example">Example: "Streamlining website performance by implementing optimization strategies to deliver lightning-fast load times, enhancing user satisfaction and search engine rankings."</p>
-  </div>
-</div>
-  </div>
-
-  <div className="third-set">
-      <div className="service">
-      <li><FontAwesomeIcon icon={faPalette} /></li>
-      <h3>User Interface (UI) Design</h3>
-      <p>Design intuitive and visually appealing user interfaces that enhance user interactions and improve overall user experience.</p>
-      <p className="example">Example: "Designing elegant and user-friendly interfaces that captivate users, improve usability, and drive engagement."</p>
-    </div>
-
-    <div className="service">
-  <li><FontAwesomeIcon icon={faClone} /></li>
-    <h3>Cloning Existing Websites</h3>
-    <p>Replicate and recreate existing websites, preserving their design, functionality, and user experience.</p>
-    <p className="example">Example: "Recreating the design and functionality of popular websites to achieve a similar user experience and functionality."</p>
-  </div>
+</section>
  </div>
 
+<div className="sprinkle-container">
+<span className="entity entity3">&diams;&diams;&diams;&diams;</span>
+<span className="entity entity4">&#9790;&#9790;&#9790;</span>  
+{/* Other components and content */}
 
-       </div>
-     </div>
 </div>
-  )
+</div>
+<Serv/>
+     </div>
+  );
 }
 
-export default Serv
+export default Portfolioheader;
