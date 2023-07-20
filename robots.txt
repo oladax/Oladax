@@ -1,11 +1,345 @@
-body{
-  background-color: rgba(255, 255, 255, 0.952);
+import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faClone, faCode, faDesktop, faGlobe, faPalette, faRocket } from '@fortawesome/free-solid-svg-icons';
+
+function Serv() {
+
+  return (
+    <div className='service-con'>
+      <div className='ser-main'>
+        <div id='servicehome' className="service-div">
+          <div className="service-intro">
+          <p >My Services</p>
+            <h2>Expertise Service! Let's Dive In.</h2>
+            <dd >I offer expertise services that deliver exceptional results. Let's collaborate to bring your vision to life.</dd>
+          </div>
+          <div className="service-container">
+            <div className="first-set">
+              <div className="service1">
+                <li><FontAwesomeIcon icon={faDesktop} /></li>
+                <h3>Responsive Web Design</h3>
+                <p>Create websites that adapt and provide an optimal viewing experience across various devices and screen sizes.</p>
+                <p >Example: "Crafting visually appealing and responsive websites that seamlessly adapt to any device, ensuring a consistent user experience."</p>
+              </div>
+              <div className="service1">
+                <li><FontAwesomeIcon icon={faCode} /></li>
+                <h3>Frontend Development</h3>
+                <p>Develop high-quality frontend code using modern web technologies (HTML, CSS, JavaScript) to bring designs to life and deliver seamless user experiences.</p>
+                <p >Example: "Building robust and performant frontend solutions, translating design concepts into clean and scalable code for exceptional user experiences."</p>
+              </div>
+            </div>
+
+            <div className="second-set">
+              <div className="service2">
+                <li><FontAwesomeIcon icon={faGlobe} /></li>
+                <h3>Cross-Browser Compatibility</h3>
+                <p>Ensure that websites and web applications are compatible and function consistently across different web browsers and platforms.</p>
+                <p >Example: "Ensuring cross-browser compatibility to guarantee that your website functions flawlessly across popular web browsers, delivering a consistent experience for all users."</p>
+              </div>
+              <div className="service2">
+                <li><FontAwesomeIcon icon={faRocket} /></li>
+                <h3>Performance Optimization</h3>
+                <p>Optimize website performance through efficient coding practices, image optimization, caching, and other techniques to improve loading speed and overall performance.</p>
+                <p >Example: "Streamlining website performance by implementing optimization strategies to deliver lightning-fast load times, enhancing user satisfaction and search engine rankings."</p>
+              </div>
+            </div>
+
+            <div className="third-set">
+              <div className="service3">
+                <li><FontAwesomeIcon icon={faPalette} /></li>
+                <h3>User Interface (UI) Design</h3>
+                <p>Design intuitive and visually appealing user interfaces that enhance user interactions and improve overall user experience.</p>
+                <p >Example: "Designing elegant and user-friendly interfaces that captivate users, improve usability, and drive engagement."</p>
+              </div>
+              <div className="service3">
+                <li><FontAwesomeIcon icon={faClone} /></li>
+                <h3>Cloning Existing Websites</h3>
+                <p>Replicate and recreate existing websites, preserving their design, functionality, and user experience.</p>
+                <p >Example: "Recreating the design and functionality of popular websites to achieve a similar user experience and functionality."</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
 }
 
-header-main{
-  background-color: rgb(245 241 241 / 70%);
+export default Serv;
+@import url('https://fonts.googleapis.com/css?family=VT323');
+
+
+.service-con{
     max-width: 88rem;
     width: 100%;
-    margin: auto;
+    margin: auto;  
+    padding-bottom: 20px;
 }
-#92b4eca1
+
+
+  .service-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .service-intro{
+    cursor: pointer;
+    margin-top: 5rem;
+  }
+
+  .service-intro p{
+    text-align: center;
+    font-size: 19px;
+    font-weight: 500;
+    color: royalblue;
+    font-family: 'VT323';
+}
+
+
+.service-intro h2{
+    text-align: center;
+    font-size: 33px;
+    font-family: 'fangsong', 'math';
+    font-weight: bolder;
+    padding: 7px;
+    line-height: 1.2;
+    color: #333;
+}
+
+.service-intro h2.darkmode{
+  color: rgb(204, 204, 204);}
+
+.service-intro dd{
+    color: #000000db;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+}
+  
+.service-intro dd.darkmode{
+  color:#ffffffdb;
+}
+
+.service-container  {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch; /* Stretch items vertically to have equal height */
+  margin-top: 40px;
+  flex-direction: column;
+}
+
+.first-set, .second-set, .third-set{
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+}
+
+.first-set .service1{
+  background-color: #e0e9f9;
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 20px;
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+
+.first-set .service1.dark{
+  background-color: #02020fe8;
+}
+
+.first-set .service1:hover{
+  cursor: pointer;
+}
+
+.first-set .service1:nth-child(1) li{
+  list-style: none;
+  font-size: 29px;
+  color: purple;
+  padding-top: 20px;
+}
+
+.first-set .service1:nth-child(2) li{
+  list-style: none;
+  font-size: 29px;
+  color: royalblue;
+  padding-top: 20px;
+}
+
+
+.first-set .service1 h3{
+  font-family: 'VT323';
+  padding-top: 18px;
+  font-size: 20px;
+}
+
+.first-set .service1:nth-child(1):hover h3{
+  color: purple;
+  cursor: pointer;
+}
+
+.first-set .service1:nth-child(2):hover h3{
+  color: royalblue;
+  cursor: pointer;
+}
+
+.first-set .service1 p{
+  padding: 14px;
+  margin-bottom: 15px;
+  font-size: 15px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.first-set .service1 #example{
+  padding: 8px;
+  color: black;
+  letter-spacing: 0;
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+/*/ second-set/*/
+
+.second-set .service2{
+  background-color: #e0e9f9;
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 5px;
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.second-set .service2.dark{
+  background-color: #02020fe8;
+}
+
+.second-set .service.dark{
+  background-color: red;
+}
+.second-set .service2:hover{
+  cursor: pointer;
+}
+
+.second-set .service2:nth-child(1) li{
+  list-style: none;
+  font-size: 29px;
+  color: red;
+  padding-top: 20px;
+}
+
+.second-set .service2:nth-child(2) li{
+  list-style: none;
+  font-size: 29px;
+  color: brown;
+  padding-top: 20px;
+}
+
+
+.second-set .service2 h3{
+  font-family: 'VT323';
+  padding-top: 15px;
+  font-size: 20px;
+}
+
+.second-set .service2:nth-child(1):hover h3{
+  color: red;
+  cursor: pointer;
+}
+
+.second-set .service2:nth-child(2):hover h3{
+  color: brown;
+  cursor: pointer;
+}
+
+.second-set .service2 p{
+  padding: 10px;
+  margin-bottom: 15px;
+  font-size: 15px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.second-set .service2 #example{
+  padding: 7px;
+  color: black;
+  letter-spacing: 0;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/*/ third-set/*/
+.third-set .service3{
+  background-color: #e0e9f9;
+  text-align: center;
+  width: 500px;
+  border-radius: 5px;
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.third-set .service3:hover{
+  cursor: pointer;
+}
+
+.third-set .service3.dark{
+  background-color: #02020fe8;
+}
+
+.third-set .service3:nth-child(1) li{
+  list-style: none;
+  font-size: 29px;
+  color: orange;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.third-set .service3:nth-child(2) li{
+  list-style: none;
+  font-size: 29px;
+  color: green;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+
+.third-set .service3 h3{
+  font-family: 'VT323';
+  padding-top: 15px;
+  font-size: 20px;
+}
+
+.third-set .service:nth-child(1):hover h3{
+  color: orange;
+  cursor: pointer;
+}
+
+.third-set .service3:nth-child(2):hover h3{
+  color: green;
+  cursor: pointer;
+}
+
+.third-set .service3 p{
+  padding: 10px;
+  font-size: 15px;
+  margin-bottom: 15px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.third-set .service3 #example{
+  padding: 7px;
+  color: black;
+  letter-spacing: 0;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/*/ toggle effect/*/
+
