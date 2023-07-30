@@ -1,1 +1,7 @@
   background-color:#e7e7e7d1;
+max-width: 88rem;
+  width: 100%;
+  margin: auto;  
+  padding-bottom: 20px;
+  margin-top: -3rem;
+  background-color: aliceblue;
