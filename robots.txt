@@ -1,326 +1,183 @@
-import React from 'react';
-import './About.css';
-import './project.css';
-import olada from './Images/IMG_2923-removebg-preview.png';
-import country from './Images/16.11.2022_15.51.09_REC-removebg-preview.png';
-import password from './Images/oladax.github.io_Password-Generator_-removebg-preview.png';
-import africook from './Images/oladax.github.io_Africook_.png';
-import calculator from './Images/oladax.github.io_Talking-Age-calculator_-removebg-preview.png';
-import bookstore from './Images/oladax.github.io_Iwelewa_.png';
-import currency from './Images/oladax.github.io_Currency-Converter-_-removebg-preview.png'
-import musicplayer from './Images/oladax.github.io_Music-Player___3_-removebg-preview.png';
-import Car from './Images/oladax.github.io_Innoson-Showorld_.png'
-import Chatgpt from './Images/kinoladax.png'
-import Dictionary from './Images/oladax.github.io_Dictionary_.png'
-import linktube from './Images/oladax.github.io_Linktube_ (1).png';
-import todo from './Images/oladax.github.io_A-todolist-application-_-removebg-preview.png'
+import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
+import './contact.css';
+import svg from './Images/undraw_team_spirit_re_yl1v.svg'
+import {faLinkedin, faFacebook, faWhatsapp, faGoogle, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircle,} from '@fortawesome/free-solid-svg-icons'; // Fix the import here
-import { faAppStoreIos, faCss3, faHtml5, faJs, faReact,  } from '@fortawesome/free-brands-svg-icons';
 
+function Contact() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
 
-function About() {
+  const [errors, setErrors] = useState({});
 
-  const abouts = document.querySelector('.abouts')
-  const pros = document.querySelector('.pro')
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      [name]: value,
+    }));
+  };
 
-  const pro = () => {
-   if(abouts.style.display = "block"){
-    abouts.style.display = "none"
-    pros.style.display = "flex"
-   }
-  }
+  const validateForm = () => {
+    const { name, email, message } = formData;
+    const errors = {};
 
-  const about = () => {
-  if(pros.style.display = "flex"){
-    pros.style.display = "none"
-    abouts.style.display = "block"
-  }
-   }
+    // Regular expression for email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    // Validate name field
+    if (!name.trim()) {
+      errors.name = 'Name is required';
+    }
+
+    // Validate email field
+    if (!email.trim()) {
+      errors.email = 'Email is required';
+    } else if (!emailRegex.test(email)) {
+      errors.email = 'Invalid email address';
+    }
+
+    // Validate message field
+    if (!message.trim()) {
+      errors.message = 'Message is required';
+    }
+
+    return errors;
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    const formErrors = validateForm();
+
+    if (Object.keys(formErrors).length === 0) {
+      sendEmail();
+    } else {
+      setErrors(formErrors);
+    }
+  };
+
+  const sendEmail = () => {
+    const serviceID = 'service_uf9lhaz';
+    const templateID = 'template_b65h425';
+    const userID = 'pr6ImLwlWeomB8shk';
+
+    emailjs.send(serviceID, templateID, formData, userID)
+      .then((response) => {
+        console.log('Email sent successfully:', response);
+        alert('Email sent successfully!');
+        setFormData({
+          name: '',
+          email: '',
+          message: '',
+        });
+        setErrors({});
+      })
+      .catch((error) => {
+        console.error('Failed to send email:', error);
+        alert('Failed to send email');
+      });
+  };
 
   return (
-    <div className="aboutcon">
-      <div className="abouts" >
-        <div id='btn' className="about-intro">
-          <p> About Me</p>
-          <h2>Developing comprehensive frontend solutions, not just visuals</h2>
+    <div className="contact">
+       <div className='contact-intro'>
+         <p>Contact me</p>
+         <h2>Got a question or proposal, or just want to say hello? Go ahead</h2>
+         <h2></h2>
         </div>
-        <div className="about">
-          <div className="oladaxpic">
-            <div className="bottom"></div>
-            <h3>Hello, clients and friends,</h3>
-            <div className="olami">
-              <img src={olada} alt="Oladax" className='ola' />
-              <p><span className="circle-icon">
-                <FontAwesomeIcon icon={faCircle} />
-              </span>ladax</p>
-            </div>
+      <div className="contact-container">
+        <div className="svg">
+          <div className="text">
+            <p>I need to reach out to oladax, I need a portfolio webiste for my business.</p>
           </div>
-         
-          <div className="aboutsentence">
-            <p>My full name is Olamide Daniel Banjo, professionally known as <span className="highlight">Oladax</span>.</p>
-            <p>I'm thrilled to share a bit about myself and the digital experiences I create.</p>
-            <p>
-              Over the years, I've dedicated myself to mastering the art of web development, focusing on <span className="highlight">HTML</span>, <span className="highlight">CSS</span>, <span className="highlight">JavaScript</span>, and <span className="highlight">React.js</span>. This journey of self-learning has allowed me to build captivating websites that cater to the needs of the general public.
-            </p>
-            <p>
-              Collaborating with other talented developers has not only expanded my skills but also allowed me to fix complex coding issues with ease. Moreover, I take great pride in being a reliable resource for my friends, assisting them in overcoming their website challenges.
-            </p>
-            <p>
-              Being resourceful is one of my strengths, and I'm always on the lookout for the latest and most efficient ways to tackle coding problems. My adept googling skills, combined with the efficient use of <span className="highlight">ChatGPT</span>, set me apart. Whether it's through online tutorials, documentation, or the vast coding community, I'm continually seeking the right resources to enhance my skills.
-            </p>
-            <p>
-              With every project, my focus is on creating visually stunning and user-friendly experiences that leave a lasting impression. Each challenge becomes an opportunity for me to grow creatively and refine my expertise.
-            </p>
-            <p>
-              I'm thrilled to offer my web development services, and I look forward to collaborating with you to bring your digital visions to life. Let's embark on this exciting journey together and craft remarkable digital experiences that make a difference.
-            </p>
-            <div className="probutton">
-              <button onClick={pro} >Project</button>
-            </div>
+
+          <div className="text">
+            <p>I Am just going to reach out to oladax for the design design🏃🏾‍♀️.</p>
           </div>
+
+          <div className="text">
+            <p>I will handle this website to oladax to clone for me. He's the best!</p>
+          </div>
+          <img src={svg}/>
+          <div className="social-media-icons">
+              <a href='https://web.facebook.com/olamide.daniel.581/?_rdc=1&_rdr' className="social-media-icon">
+              <FontAwesomeIcon icon={faFacebook} />
+            </a>
+            <a href="https://api.whatsapp.com/message/MQX3O3MI2UR4L1?autoload=1&app_absent=0">
+                  <FontAwesomeIcon icon={faWhatsapp} className="social-media-icon" />
+                </a>
+            <a href='mailto:danielolamide141@gmail.com ' className="social-media-icon">
+              <FontAwesomeIcon icon={faGoogle} />
+            </a>
+            <a href='https://www.linkedin.com/in/olamide-daniel-812039243?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BBgGEK%2BqMSaqM3amwcmgV2Q%3D%3D' className="social-media-icon">
+              <FontAwesomeIcon icon={faLinkedin} />
+            </a>
+            <a href='#' className="social-media-icon">
+              <FontAwesomeIcon icon={faTwitter} />
+            </a>
+               
+              </div>
         </div>
+        <div className="form-container">
+          <h3>Send me a direct message!</h3>
+        <form onSubmit={handleSubmit}>
+      <div className='name'>
+        <label htmlFor="name">What's your name?</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          value={formData.name}          
+          onChange={handleChange}
+          placeholder='Olamide Daniel'
+        />
+        {errors.name && <span>{errors.name}</span>}
       </div>
 
-      {/* Project session */}
-      <div className="pro" >
-        <div className="pro-intro">
-          <p>My Project</p>
-          <h2>Personal Project Perfection: Elevating Frontend Realities</h2>
+      <div className='email'>
+        <label htmlFor="email">What's your email?</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
+          placeholder='oladax@protonmail.com'
+        />
+        {errors.email && <span>{errors.email}</span>}
+      </div>
+
+      <div className='message'>
+        <label htmlFor="message">How can I help?</label>
+        <textarea
+          id="message"
+          name="message"
+          placeholder='Start your message'
+          rows={3}
+          value={formData.message}
+          onChange={handleChange}
+        />
+        {errors.message && <span>{errors.message}</span>}
+      </div>
+
+   <div className="butdiv">
+   <button type="submit">Send Message</button>
+   <span>or</span>
+   <button><a href="mailto:danielolamide141@gmail.com">Send Email</a></button>
+   </div>
+    </form>
         </div>
-        <div className="project">
-          <div className="procontainer">
-           
 
-             {/* Similar code for other projects */}
-             <div className="pros">
-              <div className='divs'>
-                <img src={bookstore} />
-              </div>
-              <h3>Bookstore</h3>
-              <h4>Techonologies used:</h4>
-              <div className="techs">
-                <div className='techcollection'>
-                <li><FontAwesomeIcon icon={faReact}/></li>
-                </div>
-                <div className="hires">
-                  <a href="https://oladax.github.io/Iwelewa/"> Live Preview </a>
-                </div>
-              </div>
-            </div>
-
-             {/* Similar code for other projects */}
-             <div className="pros">
-              <div className='divs'>
-                <img src={linktube} />
-              </div>
-              <h3>Streaming</h3>
-              <h4>Techonologies used:</h4>
-              <div className="techs">
-                <div className='techcollection'>
-                <li><FontAwesomeIcon icon={faReact}/></li>
-                </div>
-                <div className="hires">
-                  <a href="https://oladax.github.io/Linktube/"> Live Preview </a>
-                </div>
-              </div>
-            </div>
-
-
-            <div className="pros">
-              <div className='divs'>
-                <img src={africook} />
-              </div>
-              <h3>Food Recipe</h3>
-              <h4>Techonologies used:</h4>
-              <div className="techs">
-                <div className='techcollection'>
-                    <li><FontAwesomeIcon icon={faReact}/></li>
-                </div>
-                <div className="hires">
-                  <a href="https://oladax.github.io/Africook/"> Live Preview </a>
-                </div>
-              </div>
-            </div>
-            {/* Similar code for other projects */}
-            <div className="pros">
-              <div className='divs'>
-                <img src={country} />
-              </div>
-              <h3>Country Guide</h3>
-              <h4>Techonologies used:</h4>
-              <div className="techs">
-                <div className='techcollection'>
-                    <li><FontAwesomeIcon icon={faHtml5} /></li>
-                    <li><FontAwesomeIcon icon={faCss3} /></li>
-                    <li><FontAwesomeIcon icon={faJs} /></li>
-                    <li><FontAwesomeIcon icon={faAppStoreIos} /></li>
-                </div>
-                <div className="hires">
-                  <a href="https://oladax.github.io/Country-Guide/"> Live Preview </a>
-                </div>
-              </div>
-            </div>
-
-             {/* Similar code for other projects */}
-             <div className="pros">
-              <div className='divs'>
-                <img src={password} />
-              </div>
-              <h3>Password Generator</h3>
-              <h4>Techonologies used:</h4>
-              <div className="techs">
-                <div className='techcollection'>
-                    <li><FontAwesomeIcon icon={faHtml5} /></li>
-                    <li><FontAwesomeIcon icon={faCss3} /></li>
-                    <li><FontAwesomeIcon icon={faJs} /></li>
-                </div>
-                <div className="hires">
-                  <a href="https://oladax.github.io/Password-Generator/"> Live Preview </a>
-                </div>
-              </div>
-            </div>
-            
-
-             {/* Similar code for other projects */}
-             <div className="pros">
-              <div className='divs'>
-                <img src={musicplayer} />
-              </div>
-              <h3>Music Player</h3>
-              <h4>Techonologies used:</h4>
-              <div className="techs">
-                <div className='techcollection'>
-                <li><FontAwesomeIcon icon={faReact}/></li>
-
-                </div>
-                <div className="hires">
-                  <a href="https://oladax.github.io/Music-Player/"> Live Preview </a>
-                </div>
-              </div>
-            </div>
-
-             {/* Similar code for other projects */}
-             <div className="pros">
-              <div className='divs'>
-                <img src={calculator} />
-              </div>
-              <h3>Age Calculator</h3>
-              <h4>Techonologies used:</h4>
-              <div className="techs">
-                <div className='techcollection'>
-                    <li><FontAwesomeIcon icon={faHtml5} /></li>
-                    <li><FontAwesomeIcon icon={faCss3} /></li>
-                    <li><FontAwesomeIcon icon={faJs} /></li>
-                </div>
-                <div className="hires">
-                  <a href="https://oladax.github.io/Talking-Age-calculator/"> Live Preview </a>
-                </div>
-              </div>
-            </div>
-
-             {/* Similar code for other projects */}
-             <div className="pros">
-              <div className='divs'>
-                <img src={currency} />
-              </div>
-              <h3>Currency Converter</h3>
-              <h4>Techonologies used:</h4>
-              <div className="techs">
-                <div className='techcollection'>
-                    <li><FontAwesomeIcon icon={faHtml5} /></li>
-                    <li><FontAwesomeIcon icon={faCss3} /></li>
-                    <li><FontAwesomeIcon icon={faJs} /></li>
-                    <li><FontAwesomeIcon icon={faAppStoreIos} /></li>
-                </div>
-                <div className="hires">
-                  <a href="https://oladax.github.io/Currency-Converter-/"> Live Preview </a>
-                </div>
-              </div>
-            </div>
-
-             {/* Similar code for other projects */}
-             <div className="pros">
-              <div className='divs'>
-                <img src={todo} />
-              </div>
-              <h3>Todo-List</h3>
-              <h4>Techonologies used:</h4>
-              <div className="techs">
-                <div className='techcollection'>
-                    <li><FontAwesomeIcon icon={faHtml5} /></li>
-                    <li><FontAwesomeIcon icon={faCss3} /></li>
-                    <li><FontAwesomeIcon icon={faJs} /></li>
-                </div>
-                <div className="hires">
-                  <a href="https://oladax.github.io/A-todolist-application-/"> Live Preview </a></div> </div>
-             </div>
-
-
-             {/* Similar code for other projects */}
-             <div className="pros">
-              <div className='divs'>
-                <img src={Dictionary} />
-              </div>
-              <h3>Dictionary</h3>
-              <h4>Techonologies used:</h4>
-              <div className="techs">
-                <div className='techcollection'>
-                    <li><FontAwesomeIcon icon={faHtml5} /></li>
-                    <li><FontAwesomeIcon icon={faCss3} /></li>
-                    <li><FontAwesomeIcon icon={faJs} /></li>
-                    <li><FontAwesomeIcon icon={faAppStoreIos}/></li>
-                </div>
-                <div className="hires">
-                  <a href="https://oladax.github.io/Dictionary/"> Live Preview </a></div> </div>
-             </div>
-
-
-             {/* Similar code for other projects */}
-             <div className="pros">
-              <div className='divs'>
-                <img src={Car} />
-              </div>
-              <h3>Innoson Vehicles</h3>
-              <h4>Techonologies used:</h4>
-              <div className="techs">
-                <div className='techcollection'>
-                    <li><FontAwesomeIcon icon={faHtml5} /></li>
-                    <li><FontAwesomeIcon icon={faCss3} /></li>
-                    <li><FontAwesomeIcon icon={faJs} /></li>
-                </div>
-                <div className="hires">
-                  <a href="https://oladax.github.io/Innoson-Showorld/"> Live Preview </a></div> </div>
-             </div>
-
-             
-             {/* Similar code for other projects */}
-             <div className="pros">
-              <div className='divs'>
-                <img src={Chatgpt} />
-              </div>
-              <h3>Oladax Chatgpt</h3>
-              <h4>Techonologies used:</h4>
-              <div className="techs">
-                <div className='techcollection'>
-                    <li><FontAwesomeIcon icon={faHtml5} /></li>
-                    <li><FontAwesomeIcon icon={faCss3} /></li>
-                    <li><FontAwesomeIcon icon={faJs} /></li>
-                    <li><FontAwesomeIcon icon={faAppStoreIos} /></li>
-                </div>
-                <div className="hires">
-                  <a href="https://oladax.github.io/oladax-chatgpt/"> Live Preview </a></div> </div>
-             </div>
-
-          </div>
-          <div className="abtbutton">
-                  <button onClick={about}>About</button>
-                  <button><a href="https://github.com/oladax">view more</a></button>
-                </div>
-        </div>
       </div>
     </div>
+
+    
   );
 }
 
-export default About;
+export default Contact;

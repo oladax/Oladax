@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Oladax/static/css/main.0d6d4306.css",
-    "main.js": "/Oladax/static/js/main.847663cb.js",
+    "main.css": "/Oladax/static/css/main.58aaa08d.css",
+    "main.js": "/Oladax/static/js/main.a53fd708.js",
     "static/media/Oladax.mp4": "/Oladax/static/media/Oladax.bf915ba738c02b033b2c.mp4",
     "static/media/oladax.github.io_Africook_.png": "/Oladax/static/media/oladax.github.io_Africook_.bd6d3fd038d1cacb38b6.png",
     "static/media/oladax.github.io_Iwelewa_.png": "/Oladax/static/media/oladax.github.io_Iwelewa_.50d3ce0e018a6c4cfee1.png",
@@ -20,11 +20,11 @@
     "static/media/oladax.github.io_Currency-Converter-_-removebg-preview.png": "/Oladax/static/media/oladax.github.io_Currency-Converter-_-removebg-preview.bab3f0dc1f4140386436.png",
     "static/media/oladax.github.io_Password-Generator_-removebg-preview.png": "/Oladax/static/media/oladax.github.io_Password-Generator_-removebg-preview.65f6af8354dbc8f9a3fd.png",
     "index.html": "/Oladax/index.html",
-    "main.0d6d4306.css.map": "/Oladax/static/css/main.0d6d4306.css.map",
-    "main.847663cb.js.map": "/Oladax/static/js/main.847663cb.js.map"
+    "main.58aaa08d.css.map": "/Oladax/static/css/main.58aaa08d.css.map",
+    "main.a53fd708.js.map": "/Oladax/static/js/main.a53fd708.js.map"
   },
   "entrypoints": [
-    "static/css/main.0d6d4306.css",
-    "static/js/main.847663cb.js"
+    "static/css/main.58aaa08d.css",
+    "static/js/main.a53fd708.js"
   ]
 }
