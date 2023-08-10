@@ -1,218 +1,48 @@
-import React, { useState, useEffect, useRef } from 'react';
-import king from './Images/kingola-removebg-preview.png'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSun, faMoon, faTimes, faBars, faCircle} from '@fortawesome/free-solid-svg-icons';
-import { faGithub, faLinkedin, faFacebook, faWhatsapp, faTelegram, faGoodreadsG, faGoogle, faTwitter } from '@fortawesome/free-brands-svg-icons';
-import { faPlay } from '@fortawesome/free-solid-svg-icons';
-import Oladax from './Images/oladax.cv (1).jpg'
-import Serv from './Serv';
-import About from './About';
-import video from '../src/vidoe/Oladax.mp4'
-import Contact from './Contact';
+import React from 'react';
+import { Carousel as ReactCarousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import './Carousel.css';
 
-
-function Portfolioheader() {
-
-  
- 
-const ResumeButton = () => {
-  const resume = (downloadlink) => {
-    const a = document.createElement('a');
-    a.href = downloadlink;
-    a.download = "Oladax(CV)";
-    a.click();
-  };
-
-  const handleDownload = () => {
-    const downloadLink = Oladax;
-    resume(downloadLink);
-  };
-  const [Sun, setSun] = useState(true);
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // Add isMenuOpen state
-
-  const body = document.querySelector('body');
-  const h1 = document.querySelector('.h1');
-  const service1 = document.querySelectorAll('.first-set .service1');
-  const service2 = document.querySelectorAll('.first-set .service2');
-  const service3 = document.querySelectorAll('.first-set .service3');
-  const service = document.querySelectorAll('.service-intro p');
-  const aboutintro = document.querySelectorAll('.about-intro h2');
-  const names = document.querySelectorAll('.name input');
-  const textarea = document.querySelectorAll('.message textarea');
-  const email = document.querySelectorAll('.email input');
- const prointro = document.querySelectorAll('.pro-intro h2');
- const contactintro = document.querySelectorAll('.contact-intro h2');
-  const olami = document.querySelectorAll('.olami img');
-  const sun = document.querySelectorAll('.toggle button');
-  const homepage = useRef(null);
-  const h2 = document.querySelector('h2');
-  const dd = document.querySelector('dd');
-  const pros = document.querySelectorAll('.pros');
-  const header= document.querySelector('header');
-  const aboutcon = document.querySelector('.aboutcon');
-  const anchorTags = document.querySelectorAll('nav a');
-  const hire = document.querySelectorAll('.hires a');
-  const intro = document.querySelectorAll('.social-media-icons a');
-  const [isToggled, setIsToggled] = useState(true);
-
-  const handleToggle = () => {
-    setIsToggled(!isToggled);
-  };
-
-  const Pref = useRef(true);
-  const Paref = useRef(true);
-  const watch = useRef(null);
-
-   // Function to handle the click event
-   const handleWatchIntro = () => {
-    window.open(video, '_blank'); // Open the video URL in a new tab
-  };
-
-  const Darkmode = () => {
-    setSun(!Sun);
-    aboutcon.classList.toggle('darkmode');
-    aboutintro.forEach((about) => about.classList.toggle('darkmode'));
-    prointro.forEach((pro) => pro.classList.toggle('darkmode'));
-    contactintro.forEach((pro) => pro.classList.toggle('darkmode'));
-    sun.forEach((moon) => moon.classList.toggle('darkmode'));
-    olami.forEach((ola) => ola.classList.toggle('darkmode'))
-    body.classList.toggle('darkmode');
-    h1.classList.toggle('darkmode');
-    h2.classList.toggle('darkmode');
-    dd.classList.toggle('darkmode');
-    pros.forEach((pro) => pro.classList.toggle('darkmode'));
-    names.forEach((name) => name.classList.toggle('darkmode'));
-    textarea.forEach((name) => name.classList.toggle('darkmode'));
-    email.forEach((email) => email.classList.toggle('darkmode'));
-    hire.forEach((hire) => hire.classList.toggle('darkmode'));
-    service1.forEach((serve) =>serve.classList.toggle('dark') );
-    service2.forEach((servi) =>servi.classList.toggle('dark') );
-    service3.forEach((servic) =>servic.classList.toggle('dark') );
-    service.forEach((p) => p.classList.toggle('darkmode'));
-    header.classList.toggle('darkmode');
-    homepage.current.classList.toggle('dark');
-    intro.forEach((a) => a.classList.toggle('darkmode'));
-    anchorTags.forEach((map) => map.classList.toggle('darkmode'));
-    handleToggle();
-    const para = Pref.current;
-    const paras = Paref.current;
-    para.classList.toggle('darkmode');
-    paras.classList.toggle('darkmode');
-    const watch_intro = watch.current;
-    watch_intro.classList.toggle('darkmode');
-  };
-
- 
-  const triggermenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
-  const [text, setText] = useState('');
-  const message = "Hello! I'm\nOladax,\nA Frontend Web Developer.";
-
-  useEffect(() => {
-    const typeText = (currentIndex) => {
-      if (currentIndex >= message.length) return;
-      setText(message.slice(0, currentIndex + 1));
-      const delay = 200;
-      setTimeout(() => {
-        typeText(currentIndex + 1);
-      }, delay);
-    };
-
-    
-
-    typeText(0);
-  }, []);
-
-  
+const Carousel = () => {
+  const carouselData = [
+    {
+      image: 'image1.jpg',
+      quote: 'Short Quote 1',
+      fullQuote: 'This is the full quote for Slide 1. It can be longer and provide more context about the topic.',
+      text: 'Text 1',
+    },
+    {
+      image: 'image2.jpg',
+      quote: 'Short Quote 2',
+      fullQuote: 'This is the full quote for Slide 2. It can be longer and provide more context about the topic.',
+      text: 'Text 2',
+    },
+    // Add similar data for the other 4 items
+  ];
 
   return (
-    <div className="project-con">
-      <div className="header-main" ref={homepage}>
-        <header>
-          <div className="logo">
-            <span className="circle-icon">
-              <FontAwesomeIcon icon={faCircle} />
-            </span>
-            <h1>ladax</h1>
+    <div className="carousel-container">
+      <ReactCarousel
+        showThumbs={false}
+        showStatus={false}
+        infiniteLoop={true}
+        centerMode={true}
+        centerSlidePercentage={33.33}
+        autoPlay={true}
+        interval={5000}
+        stopOnHover={true}
+      >
+        {carouselData.map((item, index) => (
+          <div className="carousel-item" key={index}>
+            <img src={item.image} alt={`Image ${index + 1}`} />
+            <h2>{item.quote}</h2>
+            <p>{item.text}</p>
+            <p className="full-quote">{item.fullQuote}</p>
           </div>
-          <nav>
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#servicehome">Services</a></li>
-              <li><a href="#pro">Projects</a></li>
-              <li><a href="#contact">Contact</a></li>
-              <li><a href="#testimonials">Testimonials</a></li>
-            </ul>
-          </nav>
-          <button className="hire">
-            <a href="contact"> Hire Me <span className="forward">&raquo;</span></a>
-          </button>
-          <div className="dropdown">
-            <button onClick={triggermenu}>
-              <FontAwesomeIcon icon={isMenuOpen ? faTimes : faBars} />
-            </button>
-          </div>
-        </header>
-        <div className="toggle">
-          <button onClick={Darkmode}>
-            <FontAwesomeIcon icon={Sun ? faSun : faMoon} />
-          </button>
-        </div>
-        <div className="section-con">
-          <section>
-            <div className="intro-con">
-              <h1 className="h1">{text}</h1>
-              <p ref={Pref}>
-                I specialize in crafting engaging websites that captivate users. 
-                <p ref={Paref}>Hire me now
-                 to discover the excellence of my web development expertise.</p>
-              </p>
-              <div className="cv-con">
-              <button onClick={handleDownload}>Download Resume</button>
-                <button className="play" onClick={handleWatchIntro}>
-    <FontAwesomeIcon icon={faPlay} />
-    </button>
-              </div>
-            </div>
-            <div className="oladax-pic">
-              <img src={king}  />
-              <div>
-                <div className="empty"></div>
-              </div>
-              <div className="social-media-icons">
-              <a href='https://web.facebook.com/olamide.daniel.581/?_rdc=1&_rdr' className="social-media-icon">
-              <FontAwesomeIcon icon={faFacebook} />
-            </a>
-            <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Ftwitter.com%2FOladdev%2Fstatus%2F1593058432587747328%3Fs%3D20%26fbclid%3DIwAR25L1c9TV7HgSk7fycwKbwcrEhPn-wWKHL4qA7-f--in4u6AwTbg1tv2kM&h=AT1Cx6kRTxsqr-XyeDJTF-zzK2QpoikdS6Aia6C4ig4Q43trjqFaQMwPjIviDSqXHj7tII8vlcSyUCFKhDnl_x2xbBG4e7oIIFw2Dt7BudizkJrimXWGSNdpx62LSAsV-gs-Cg">
-                  <FontAwesomeIcon icon={faTwitter} className="social-media-icon" />
-                </a>
-            <a href='mailto:danielolamide141@gmail.com ' className="social-media-icon">
-              <FontAwesomeIcon icon={faGoogle} />
-            </a>
-            <a href='https://www.linkedin.com/in/olamide-daniel-812039243?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BBgGEK%2BqMSaqM3amwcmgV2Q%3D%3D' className="social-media-icon">
-              <FontAwesomeIcon icon={faLinkedin} />
-            </a>
-            <a href='https://api.whatsapp.com/message/MQX3O3MI2UR4L1?autoload=1&app_absent=0' className="social-media-icon">
-              <FontAwesomeIcon icon={faWhatsapp} />
-            </a>
-               
-              </div>
-            </div>
-          </section>
-        </div>
-        <div className="sprinkle-container">
-          <span className="entity entity3">&diams;&diams;&diams;&diams;</span>
-          <span className="entity entity4">&#9790;&#9790;&#9790;</span>
-        </div>
-      </div>
-      <Serv />
-      <About/>
-      <Contact/>
+        ))}
+      </ReactCarousel>
     </div>
   );
-}
+};
 
-export default Portfolioheader;
+export default Carousel;
