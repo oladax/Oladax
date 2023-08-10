@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Oladax/static/css/main.1b92f054.css",
-    "main.js": "/Oladax/static/js/main.cefe61a0.js",
+    "main.css": "/Oladax/static/css/main.c4bf89a9.css",
+    "main.js": "/Oladax/static/js/main.09667fa3.js",
     "static/media/Oladax.mp4": "/Oladax/static/media/Oladax.bf915ba738c02b033b2c.mp4",
     "static/media/oladax.github.io_Africook_.png": "/Oladax/static/media/oladax.github.io_Africook_.bd6d3fd038d1cacb38b6.png",
     "static/media/oladax.github.io_Iwelewa_.png": "/Oladax/static/media/oladax.github.io_Iwelewa_.50d3ce0e018a6c4cfee1.png",
     "static/media/oladax.github.io_Innoson-Showorld_.png": "/Oladax/static/media/oladax.github.io_Innoson-Showorld_.620efd3839570405f346.png",
     "static/media/oladax.github.io_Linktube_ (1).png": "/Oladax/static/media/oladax.github.io_Linktube_ (1).82cbcfdf9b5cb7d7441e.png",
-    "static/media/IMG_2923_digital_art_x4__1_-removebg-preview.png": "/Oladax/static/media/IMG_2923_digital_art_x4__1_-removebg-preview.5f09f860e07f19c7981c.png",
     "static/media/oladax.cv (1).jpg": "/Oladax/static/media/oladax.cv (1).e1f462a584af8513cef5.jpg",
+    "static/media/Oladax2_digital_art_x4-removebg-preview.png": "/Oladax/static/media/Oladax2_digital_art_x4-removebg-preview.3923524376a47fafa7b5.png",
     "static/media/Oletter1-removebg-preview.png": "/Oladax/static/media/Oletter1-removebg-preview.4d90bcea393b2fad21b2.png",
     "static/media/kingola-removebg-preview.png": "/Oladax/static/media/kingola-removebg-preview.7345cfd955adcc0645b5.png",
     "static/media/oladax.github.io_Dictionary_.png": "/Oladax/static/media/oladax.github.io_Dictionary_.52a64be86bc87bf316e9.png",
@@ -21,11 +21,11 @@
     "static/media/oladax.github.io_Currency-Converter-_-removebg-preview.png": "/Oladax/static/media/oladax.github.io_Currency-Converter-_-removebg-preview.bab3f0dc1f4140386436.png",
     "static/media/oladax.github.io_Password-Generator_-removebg-preview.png": "/Oladax/static/media/oladax.github.io_Password-Generator_-removebg-preview.65f6af8354dbc8f9a3fd.png",
     "index.html": "/Oladax/index.html",
-    "main.1b92f054.css.map": "/Oladax/static/css/main.1b92f054.css.map",
-    "main.cefe61a0.js.map": "/Oladax/static/js/main.cefe61a0.js.map"
+    "main.c4bf89a9.css.map": "/Oladax/static/css/main.c4bf89a9.css.map",
+    "main.09667fa3.js.map": "/Oladax/static/js/main.09667fa3.js.map"
   },
   "entrypoints": [
-    "static/css/main.1b92f054.css",
-    "static/js/main.cefe61a0.js"
+    "static/css/main.c4bf89a9.css",
+    "static/js/main.09667fa3.js"
   ]
 }
