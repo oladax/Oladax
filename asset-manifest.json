@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Oladax/static/css/main.293a1d47.css",
-    "main.js": "/Oladax/static/js/main.6e69897f.js",
+    "main.css": "/Oladax/static/css/main.51e0a188.css",
+    "main.js": "/Oladax/static/js/main.c67dce60.js",
     "static/media/Gold Luxury Initial Circle Logo.mp4": "/Oladax/static/media/Gold Luxury Initial Circle Logo.84ea12cad1033547ca06.mp4",
     "static/media/oladax.github.io_Africook_.png": "/Oladax/static/media/oladax.github.io_Africook_.bd6d3fd038d1cacb38b6.png",
     "static/media/oladax.github.io_Iwelewa_.png": "/Oladax/static/media/oladax.github.io_Iwelewa_.50d3ce0e018a6c4cfee1.png",
@@ -10,23 +10,26 @@
     "static/media/oladax.cv (1).jpg": "/Oladax/static/media/oladax.cv (1).e1f462a584af8513cef5.jpg",
     "static/media/Oladax2_digital_art_x4-removebg-preview.png": "/Oladax/static/media/Oladax2_digital_art_x4-removebg-preview.3923524376a47fafa7b5.png",
     "static/media/Oletter1-removebg-preview.png": "/Oladax/static/media/Oletter1-removebg-preview.4d90bcea393b2fad21b2.png",
-    "static/media/IMG_2923.JPG": "/Oladax/static/media/IMG_2923.0aa01ff79fb0428790a9.JPG",
     "static/media/kingola-removebg-preview.png": "/Oladax/static/media/kingola-removebg-preview.7345cfd955adcc0645b5.png",
     "static/media/oladax.github.io_Dictionary_.png": "/Oladax/static/media/oladax.github.io_Dictionary_.52a64be86bc87bf316e9.png",
     "static/media/kinoladax.png": "/Oladax/static/media/kinoladax.c46822975d95403492c7.png",
+    "static/media/Mimi.jpeg": "/Oladax/static/media/Mimi.4a92beabecf24753ee45.jpeg",
+    "static/media/madu.jpg": "/Oladax/static/media/madu.ee78223a66e031681e7c.jpg",
     "static/media/oladax.github.io_Talking-Age-calculator_-removebg-preview.png": "/Oladax/static/media/oladax.github.io_Talking-Age-calculator_-removebg-preview.6b4a1e71b57f54f4b9fb.png",
     "static/media/16.11.2022_15.51.09_REC-removebg-preview.png": "/Oladax/static/media/16.11.2022_15.51.09_REC-removebg-preview.2bcba4d995aa22a1d093.png",
     "static/media/oladax.github.io_Music-Player___3_-removebg-preview.png": "/Oladax/static/media/oladax.github.io_Music-Player___3_-removebg-preview.d47c2510bdb0596482d3.png",
+    "static/media/marvey.jpeg": "/Oladax/static/media/marvey.1a9d466c794bf44bea15.jpeg",
+    "static/media/Techguru.jpg": "/Oladax/static/media/Techguru.55b9d0ac6f6f64ec0a6f.jpg",
     "static/media/oladax.github.io_A-todolist-application-_-removebg-preview.png": "/Oladax/static/media/oladax.github.io_A-todolist-application-_-removebg-preview.d8b02b71edf4d7b6fa53.png",
     "static/media/undraw_team_spirit_re_yl1v.svg": "/Oladax/static/media/undraw_team_spirit_re_yl1v.d814e5786333fe80c802afe01f38a946.svg",
     "static/media/oladax.github.io_Currency-Converter-_-removebg-preview.png": "/Oladax/static/media/oladax.github.io_Currency-Converter-_-removebg-preview.bab3f0dc1f4140386436.png",
     "static/media/oladax.github.io_Password-Generator_-removebg-preview.png": "/Oladax/static/media/oladax.github.io_Password-Generator_-removebg-preview.65f6af8354dbc8f9a3fd.png",
     "index.html": "/Oladax/index.html",
-    "main.293a1d47.css.map": "/Oladax/static/css/main.293a1d47.css.map",
-    "main.6e69897f.js.map": "/Oladax/static/js/main.6e69897f.js.map"
+    "main.51e0a188.css.map": "/Oladax/static/css/main.51e0a188.css.map",
+    "main.c67dce60.js.map": "/Oladax/static/js/main.c67dce60.js.map"
   },
   "entrypoints": [
-    "static/css/main.293a1d47.css",
-    "static/js/main.6e69897f.js"
+    "static/css/main.51e0a188.css",
+    "static/js/main.c67dce60.js"
   ]
 }
