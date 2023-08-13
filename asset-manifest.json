@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Oladax/static/css/main.e6080f2e.css",
-    "main.js": "/Oladax/static/js/main.6c011e73.js",
+    "main.css": "/Oladax/static/css/main.293a1d47.css",
+    "main.js": "/Oladax/static/js/main.6e69897f.js",
     "static/media/Gold Luxury Initial Circle Logo.mp4": "/Oladax/static/media/Gold Luxury Initial Circle Logo.84ea12cad1033547ca06.mp4",
     "static/media/oladax.github.io_Africook_.png": "/Oladax/static/media/oladax.github.io_Africook_.bd6d3fd038d1cacb38b6.png",
     "static/media/oladax.github.io_Iwelewa_.png": "/Oladax/static/media/oladax.github.io_Iwelewa_.50d3ce0e018a6c4cfee1.png",
@@ -10,6 +10,7 @@
     "static/media/oladax.cv (1).jpg": "/Oladax/static/media/oladax.cv (1).e1f462a584af8513cef5.jpg",
     "static/media/Oladax2_digital_art_x4-removebg-preview.png": "/Oladax/static/media/Oladax2_digital_art_x4-removebg-preview.3923524376a47fafa7b5.png",
     "static/media/Oletter1-removebg-preview.png": "/Oladax/static/media/Oletter1-removebg-preview.4d90bcea393b2fad21b2.png",
+    "static/media/IMG_2923.JPG": "/Oladax/static/media/IMG_2923.0aa01ff79fb0428790a9.JPG",
     "static/media/kingola-removebg-preview.png": "/Oladax/static/media/kingola-removebg-preview.7345cfd955adcc0645b5.png",
     "static/media/oladax.github.io_Dictionary_.png": "/Oladax/static/media/oladax.github.io_Dictionary_.52a64be86bc87bf316e9.png",
     "static/media/kinoladax.png": "/Oladax/static/media/kinoladax.c46822975d95403492c7.png",
@@ -21,11 +22,11 @@
     "static/media/oladax.github.io_Currency-Converter-_-removebg-preview.png": "/Oladax/static/media/oladax.github.io_Currency-Converter-_-removebg-preview.bab3f0dc1f4140386436.png",
     "static/media/oladax.github.io_Password-Generator_-removebg-preview.png": "/Oladax/static/media/oladax.github.io_Password-Generator_-removebg-preview.65f6af8354dbc8f9a3fd.png",
     "index.html": "/Oladax/index.html",
-    "main.e6080f2e.css.map": "/Oladax/static/css/main.e6080f2e.css.map",
-    "main.6c011e73.js.map": "/Oladax/static/js/main.6c011e73.js.map"
+    "main.293a1d47.css.map": "/Oladax/static/css/main.293a1d47.css.map",
+    "main.6e69897f.js.map": "/Oladax/static/js/main.6e69897f.js.map"
   },
   "entrypoints": [
-    "static/css/main.e6080f2e.css",
-    "static/js/main.6c011e73.js"
+    "static/css/main.293a1d47.css",
+    "static/js/main.6e69897f.js"
   ]
 }
