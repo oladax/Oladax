@@ -1,57 +1,30 @@
-import React from 'react';
-import { Carousel as ReactCarousel } from 'react-responsive-carousel';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import './Carousel.css';
+/* Carousel.css */
+/* ... (other styles) */
 
-const Carousel = () => {
-  const carouselData = [
-    {
-      image: 'image1.jpg',
-      quote: 'Short Quote 1',
-      fullQuote: 'This is the full quote for Slide 1. It can be longer and provide more context about the topic.',
-      text: 'Text 1',
-    },
-    {
-      image: 'image2.jpg',
-      quote: 'Short Quote 2',
-      fullQuote: 'This is the full quote for Slide 2. It can be longer and provide more context about the topic.',
-      text: 'Text 2',
-    },
-    // Add similar data for the other 4 items
-  ];
+/* Style for Navigation Arrows */
+.swiper-button-prev,
+.swiper-button-next {
+  color: #333; /* Arrow color */
+  font-size: 24px; /* Arrow size */
+  background-color: #fff; /* Background color */
+  border-radius: 50%; /* Circular shape */
+  padding: 5px 10px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
 
-  return (
-    <div className="carousel-container">
-      <ReactCarousel
-        showThumbs={false}
-        showStatus={false}
-        infiniteLoop={true}
-        centerMode={true}
-        centerSlidePercentage={33.33}
-        autoPlay={true}
-        interval={5000}
-        stopOnHover={true}
-      >
-        {carouselData.map((item, index) => (
-          <div className="carousel-item" key={index}>
-            <img src={item.image} alt={`Image ${index + 1}`} />
-            <h2>{item.quote}</h2>
-            <p>{item.text}</p>
-            <p className="full-quote">{item.fullQuote}</p>
-          </div>
-        ))}
-      </ReactCarousel>
-    </div>
-  );
-};
- display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: black;
-    border-radius: 5px;
-    color: white;
-    outline: none;
-    border: none;
-    transition: display 1s ease;  
-export default Carousel;
+/* Style for Pagination Bullets */
+.swiper-pagination-bullet {
+  width: 10px; /* Bullet width */
+  height: 10px; /* Bullet height */
+  background-color: #ddd; /* Bullet color */
+  border-radius: 50%; /* Circular shape */
+  margin: 0 5px; /* Space between bullets */
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #333; /* Active bullet color */
+}
+
+/* ... (other styles) */
