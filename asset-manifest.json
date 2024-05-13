@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Oladax/static/css/main.0d774dc8.css",
-    "main.js": "/Oladax/static/js/main.726482e4.js",
+    "main.css": "/Oladax/static/css/main.fea5068c.css",
+    "main.js": "/Oladax/static/js/main.690a2139.js",
     "static/media/VID-20230825-WA0005.mp4": "/Oladax/static/media/VID-20230825-WA0005.d2ff064ddb7c456b39ce.mp4",
     "static/media/oladax.github.io_Africook_.png": "/Oladax/static/media/oladax.github.io_Africook_.bd6d3fd038d1cacb38b6.png",
     "static/media/oladax.github.io_Iwelewa_.png": "/Oladax/static/media/oladax.github.io_Iwelewa_.50d3ce0e018a6c4cfee1.png",
@@ -10,7 +10,6 @@
     "static/media/Oletter1-removebg-preview.png": "/Oladax/static/media/Oletter1-removebg-preview.4d90bcea393b2fad21b2.png",
     "static/media/kingola-removebg-preview.png": "/Oladax/static/media/kingola-removebg-preview.7345cfd955adcc0645b5.png",
     "static/media/oladax.github.io_Dictionary_.png": "/Oladax/static/media/oladax.github.io_Dictionary_.52a64be86bc87bf316e9.png",
-    "static/media/WhatsApp Image 2023-08-24 at 1.35.03 AM.jpeg": "/Oladax/static/media/WhatsApp Image 2023-08-24 at 1.35.03 AM.df057718be7bb551ea62.jpeg",
     "static/media/kinoladax.png": "/Oladax/static/media/kinoladax.c46822975d95403492c7.png",
     "static/media/sammy.jpg": "/Oladax/static/media/sammy.fa3c5879a5f80d8071c3.jpg",
     "static/media/Mimi.jpeg": "/Oladax/static/media/Mimi.4a92beabecf24753ee45.jpeg",
@@ -26,12 +25,13 @@
     "static/media/undraw_team_spirit_re_yl1v.svg": "/Oladax/static/media/undraw_team_spirit_re_yl1v.d814e5786333fe80c802afe01f38a946.svg",
     "static/media/oladax.github.io_Currency-Converter-_-removebg-preview.png": "/Oladax/static/media/oladax.github.io_Currency-Converter-_-removebg-preview.bab3f0dc1f4140386436.png",
     "static/media/oladax.github.io_Password-Generator_-removebg-preview.png": "/Oladax/static/media/oladax.github.io_Password-Generator_-removebg-preview.65f6af8354dbc8f9a3fd.png",
+    "static/media/WhatsApp Image 2024-05-12 at 3.27.47 PM (1).jpeg": "/Oladax/static/media/WhatsApp Image 2024-05-12 at 3.27.47 PM (1).8423e039a93386fac5ac.jpeg",
     "index.html": "/Oladax/index.html",
-    "main.0d774dc8.css.map": "/Oladax/static/css/main.0d774dc8.css.map",
-    "main.726482e4.js.map": "/Oladax/static/js/main.726482e4.js.map"
+    "main.fea5068c.css.map": "/Oladax/static/css/main.fea5068c.css.map",
+    "main.690a2139.js.map": "/Oladax/static/js/main.690a2139.js.map"
   },
   "entrypoints": [
-    "static/css/main.0d774dc8.css",
-    "static/js/main.726482e4.js"
+    "static/css/main.fea5068c.css",
+    "static/js/main.690a2139.js"
   ]
 }
